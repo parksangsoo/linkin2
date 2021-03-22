@@ -7,10 +7,8 @@ const Header = () => {
             <div className="headerleft">
                 <img className="linkinicon" src="https://www.flaticon.com/svg/static/icons/svg/174/174857.svg" alt=""/>
                 <div className="sreach">
-
                     <input type="text"/>
                 </div>
-                
             </div>
             <div className="headerright">
 

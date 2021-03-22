@@ -1,6 +1,14 @@
 .header {
+  position: sticky;
+  display: flex;
   background-color: red;
-  height: 100px;
+  justify-content: space-evenly;
+
+  width: 100%;
+}
+
+.headerleft {
+  display: flex;
 }
 
 .headerleft > img {
