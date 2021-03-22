@@ -1,0 +1,4 @@
+.headeroption {
+  display: flex;
+  flex-direction: column;
+}
