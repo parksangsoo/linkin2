@@ -1,9 +1,11 @@
 .header {
   position: sticky;
   display: flex;
-  background-color: red;
+  background-color: white;
   justify-content: space-evenly;
-
+  border-bottom: 0.1px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
 }
 
@@ -15,6 +17,21 @@
   object-fit: contain;
   height: 40px;
   margin-right: 10px;
+}
+
+.sreach {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 22px;
+  border-radius: 5px;
+  background-color: #eef3f8;
+}
+
+.sreach > input {
+  outline: none;
+  border: none;
+  background: none;
 }
 
 .headerright {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './headeroption.css';
+import './Headeroption.css';
 
 
 const HeaderOption = ({Icon, title}) => {

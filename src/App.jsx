@@ -1,15 +1,18 @@
 import './App.css';
-import Header from './header/header';
+import Feed from './feed/Feed';
+import Header from './header/Header';
+import SideBar from './sidebar/Sidebar';
+import Widgets from './widgets/Widgets';
 
 function App() {
   return (
-    <div className="App">
-      {/*header*/}
+    <div className="app">
       <Header/>
-      {/*left*/}
-      {/*center*/}
-      {/*right*/}
-
+      <div className="app__body">
+        <SideBar />
+        <Feed />
+        <Widgets />
+      </div>
     </div>
   );
 }
