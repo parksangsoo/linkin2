@@ -15,7 +15,7 @@ const SideBar = () => {
         <div className="sidebar">
             <div className="sidebarup">
                 <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80" alt=""/>
-                <h4>박상수</h4>
+                <h2>박상수</h2>
                 <h4>asdf@gmail.com</h4>
             </div>
 

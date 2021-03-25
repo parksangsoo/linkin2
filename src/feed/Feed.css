@@ -1,3 +1,35 @@
+.feed {
+  margin: 0 20px;
+  flex: 0.6;
+}
+
 .feedinput {
   background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.inputbox {
+  border: 0.1px solid lightgray;
+  border-radius: 30px;
+  display: flex;
+  padding: 10px;
+  color: gray;
+  padding-left: 15px;
+}
+
+.inputbox > form > input {
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.inputoption {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  font-size: 10px;
+  color: gray;
 }
