@@ -5,8 +5,8 @@ import ImageIcon from '@material-ui/icons/Image';
 import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
-import FeedOption from './Feedoption';
-import Post from './Post';
+import FeedOption from '../feedoption/Feedoption';
+import Post from '../post/Post';
 
 
 const Feed = () => {
@@ -16,22 +16,19 @@ const Feed = () => {
             id: 1,
             name: 'name1', 
             description: 'des1', 
-            message: 'mes1', 
-            photoUrl: 'ph1'
+            message: 'mes1'
           },
           {
             id: 2,
             name: 'name2', 
             description: 'des2', 
-            message: 'mes2', 
-            photoUrl: 'ph2'
+            message: 'mes2'
           },
           {
             id: 3,
             name: 'name3', 
             description: 'des3', 
-            message: 'mes3', 
-            photoUrl: 'ph3'
+            message: 'mes3'
           }
     ]);
 
@@ -54,7 +51,7 @@ const Feed = () => {
 
             <div className="feedlist">
                 {posts.map((post) => (
-                    <Post key={post.id} name={post.name} description={post.description} message={post.message} photoUrl={post.photoUrl}/>
+                    <Post key={post.id} name={post.name} description={post.description} message={post.message}/>
                 ))}
             </div>
         </div>
