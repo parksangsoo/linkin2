@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React,{ useEffect, useState } from 'react';
 import './Feed.css';
 import CreateIcon from '@material-ui/icons/Create';
 import ImageIcon from '@material-ui/icons/Image';
@@ -14,12 +14,24 @@ import firebase from 'firebase';
 const Feed = () => {
 
     const [input, setInput] = useState('');
-    const [posts, setPosts] = useState([
+    const [posts, setPosts] = useState([]);
 
-    ]);
+    useEffect(() => {
+        db.collection("posts")
+            .orderBy("timestamp","desc")
+            .onSnapshot((snapshot) => 
+            setPosts(
+                snapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    data: doc.data(),
+                }))
+            )
+        );
+    }, []);
 
     const sendPost = (e) => {
         e.preventDefault();
+        
 
         db.collection('posts').add({
             name: 'name',
