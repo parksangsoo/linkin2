@@ -7,36 +7,30 @@ import EventNoteIcon from '@material-ui/icons/EventNote';
 import CalendarViewDayIcon from '@material-ui/icons/CalendarViewDay';
 import InputOption from '../inputoption/Inputoption';
 import Post from '../post/Post';
+import { db } from '..firebase/firebase';
+import firebase from 'firebase';
 
 
 const Feed = () => {
 
-    const [posts,setPosts] = useState([
-          {
-            id: 1,
-            name: 'name1', 
-            description: 'des1', 
-            message: 'mes1',
-            photoUrl: 'A'
-          },
-          {
-            id: 2,
-            name: 'name2', 
-            description: 'des2', 
-            message: 'mes2',
-            photoUrl: 'B'
-          },
-          {
-            id: 3,
-            name: 'name3', 
-            description: 'des3', 
-            message: 'mes3',
-            photoUrl: 'C'
-          }
+    const [input, setInput] = useState('');
+    const [posts, setPosts] = useState([
+
     ]);
 
     const sendPost = (e) => {
         e.preventDefault();
+
+        db.collection('posts').add({
+            name: 'name',
+            description: 'des',
+            message: input,
+            photoUrl: 'photo',
+            timestamp: firebase.firestore.FieldValue.servserTimestamp(),
+            
+        });
+
+        setInput('');
     };
 
     return(
@@ -45,7 +39,7 @@ const Feed = () => {
                 <div className="inputbox">
                     <CreateIcon />
                     <form>
-                        <input type="text"/>
+                        <input value={input} onChange={e => setInput(e.target.value)} type="text"/>
                         <button onClick={sendPost} type="submit">Send</button>
                     </form>
                 </div>
