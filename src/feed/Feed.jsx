@@ -35,6 +35,10 @@ const Feed = () => {
           }
     ]);
 
+    const sendPost = (e) => {
+        e.preventDefault();
+    };
+
     return(
         <div className="feed">
             <div className="feedinput">
@@ -42,7 +46,7 @@ const Feed = () => {
                     <CreateIcon />
                     <form>
                         <input type="text"/>
-                        <button type="submit">Send</button>
+                        <button onClick={sendPost} type="submit">Send</button>
                     </form>
                 </div>
                 <div className="inputoptions">
