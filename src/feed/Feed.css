@@ -20,16 +20,24 @@
   padding-left: 15px;
 }
 
-.inputbox > form > input {
-  outline: none;
-  border: none;
-  background: none;
+.inputbox > form {
+  display: flex;
+  width: 100%;
 }
 
-.inputoption {
+.inputbox > form > input {
+  border: none;
+  flex: 1;
+  margin-left: 10px;
+  outline-width: 0;
+  font-weight: 600;
+}
+
+.inputbox > form > button {
+  display: none;
+}
+
+.inputoptions {
   display: flex;
   justify-content: space-between;
-  margin: 30px;
-  font-size: 10px;
-  color: gray;
 }
